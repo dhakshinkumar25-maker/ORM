@@ -24,8 +24,8 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 
-```
 models.py
+```html
 from django.db import models
 from django.contrib import admin
 
@@ -39,9 +39,9 @@ class car(models.Model):
     color=models.CharField(max_length=50)
 class carAdmin(admin.ModelAdmin):
     list_display=('reg_no',"brandname","fueltype",'price',"year",'color')
-
-
-
+```
+admin.py
+```html
 from django.contrib import admin
 from .models import car,carAdmin
 admin.site.register(car,carAdmin)
